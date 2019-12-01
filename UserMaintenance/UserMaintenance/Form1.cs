@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,11 @@ namespace UserMaintenance
         public Form1()
         {
             InitializeComponent();
-            lblLastName.Text = Resource.LastName; // label1
-            lblFirstName.Text = Resource.FirstName; // label2
+            lblFullName.Text = Resource.FullName; // label1
             btnAdd.Text = Resource.Add; // button1
+            btnMentes.Text = Resource.Save_to_file;
             btnAdd.Click += BtnAdd_Click;
+            btnMentes.Click += BtnMentes_Click;
 
             listUsers.DataSource = users;
             listUsers.ValueMember = "ID";
@@ -28,12 +30,27 @@ namespace UserMaintenance
 
         }
 
+        private void BtnMentes_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "txt file (*.txt)|*.txt";
+            sfd.Title = "Mentés";
+            sfd.ShowDialog();
+            sfd.ShowDialog();
+
+            using (StreamWriter sw = new StreamWriter(sfd.FileName))
+            {
+                sw.WriteLine(string.Format("ID:", listUsers.ValueMember));
+                sw.WriteLine(string.Format("Full Name:", listUsers.DisplayMember));
+                
+            }
+        }
+
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             var u = new Entities.User()
             {
-                LastName = textBox1.Text,
-                FirstName = textBox2.Text
+                FullName = textBox1.Text
             };
             users.Add(u);
         }
