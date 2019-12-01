@@ -34,6 +34,7 @@
             this.lblFullName = new System.Windows.Forms.Label();
             this.lblFajlbairas = new System.Windows.Forms.Label();
             this.btnMentes = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listUsers
@@ -86,11 +87,21 @@
             this.btnMentes.Text = "Mentés";
             this.btnMentes.UseVisualStyleBackColor = true;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(296, 96);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(245, 34);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.Text = "button1";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 310);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnMentes);
             this.Controls.Add(this.lblFajlbairas);
             this.Controls.Add(this.lblFullName);
@@ -112,6 +123,7 @@
         private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.Label lblFajlbairas;
         private System.Windows.Forms.Button btnMentes;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 

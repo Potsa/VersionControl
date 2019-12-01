@@ -21,13 +21,21 @@ namespace UserMaintenance
             lblFullName.Text = Resource.FullName; // label1
             btnAdd.Text = Resource.Add; // button1
             btnMentes.Text = Resource.Save_to_file;
+            btnDelete.Text = Resource.Delete;
             btnAdd.Click += BtnAdd_Click;
             btnMentes.Click += BtnMentes_Click;
+            btnDelete.Click += BtnDelete_Click;
 
             listUsers.DataSource = users;
             listUsers.ValueMember = "ID";
             listUsers.DisplayMember = "FullName";
 
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            var o = listUsers.SelectedItem;
+            users.Remove(o);
         }
 
         private void BtnMentes_Click(object sender, EventArgs e)
