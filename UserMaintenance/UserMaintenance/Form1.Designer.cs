@@ -30,10 +30,10 @@
         {
             this.listUsers = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblFullName = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
+            this.lblFajlbairas = new System.Windows.Forms.Label();
+            this.btnMentes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listUsers
@@ -46,21 +46,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(347, 30);
+            this.textBox1.Location = new System.Drawing.Point(381, 27);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
+            this.textBox1.Size = new System.Drawing.Size(160, 20);
             this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(347, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 20);
-            this.textBox2.TabIndex = 2;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(296, 92);
+            this.btnAdd.Location = new System.Drawing.Point(296, 56);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(245, 34);
             this.btnAdd.TabIndex = 3;
@@ -76,24 +69,32 @@
             this.lblFullName.TabIndex = 4;
             this.lblFullName.Text = "label1";
             // 
-            // lblFirstName
+            // lblFajlbairas
             // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(306, 59);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(35, 13);
-            this.lblFirstName.TabIndex = 5;
-            this.lblFirstName.Text = "label2";
+            this.lblFajlbairas.AutoSize = true;
+            this.lblFajlbairas.Location = new System.Drawing.Point(309, 149);
+            this.lblFajlbairas.Name = "lblFajlbairas";
+            this.lblFajlbairas.Size = new System.Drawing.Size(0, 13);
+            this.lblFajlbairas.TabIndex = 6;
+            // 
+            // btnMentes
+            // 
+            this.btnMentes.Location = new System.Drawing.Point(296, 246);
+            this.btnMentes.Name = "btnMentes";
+            this.btnMentes.Size = new System.Drawing.Size(128, 35);
+            this.btnMentes.TabIndex = 7;
+            this.btnMentes.Text = "Mentés";
+            this.btnMentes.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 310);
-            this.Controls.Add(this.lblFirstName);
+            this.Controls.Add(this.btnMentes);
+            this.Controls.Add(this.lblFajlbairas);
             this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listUsers);
             this.Name = "Form1";
@@ -107,10 +108,10 @@
 
         private System.Windows.Forms.ListBox listUsers;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblFullName;
-        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Label lblFajlbairas;
+        private System.Windows.Forms.Button btnMentes;
     }
 }
 
